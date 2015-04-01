@@ -1,4 +1,4 @@
-# Docker ELK-Stack Container - Logstash
+# Docker ELK-Stack Container - Logstash-Forwarder
 _maintained by MarvAmBass_
 
 [FAQ - All you need to know about the marvambass Containers](https://marvin.im/docker-faq-all-you-need-to-know-about-the-marvambass-containers/)
