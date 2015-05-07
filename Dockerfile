@@ -11,7 +11,9 @@ ENV PATH /opt/logstash-forwarder/bin:$PATH
 
 COPY entrypoint.sh /
 
-VOLUME ["/logstash-forwarder-conf", "/certs"]
+VOLUME ["/logstash-forwarder-conf", "/certs", /logstash]
+
+WORKDIR /home/logstash
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["logstash-forwarder", "-config=/etc/logstash-forwarder.conf"]
