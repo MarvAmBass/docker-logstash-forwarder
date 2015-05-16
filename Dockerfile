@@ -8,7 +8,7 @@ ENV PATH /opt/logstash-forwarder/bin:$PATH
 
 COPY entrypoint.sh /
 
-VOLUME ["/logstash-forwarder-conf", "/certs", /home/logstash]
+VOLUME ["/logstash-forwarder-conf", "/certs", "/home/logstash"]
 
 WORKDIR /home/logstash
 
