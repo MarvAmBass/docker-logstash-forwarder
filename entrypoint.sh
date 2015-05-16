@@ -2,8 +2,7 @@
 
 if [ ! -f /certs/logstash-forwarder.crt ]
 then
-  >&2 echo ">> no cert found... exiting"
-  exit 1
+  >&2 echo ">> no cert found... make sure you configuration maches!"
 fi
 
 if [ ! -f /logstash-forwarder-conf/logstash-forwarder.conf ]
