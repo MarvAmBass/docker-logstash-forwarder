@@ -2,8 +2,7 @@
 
 if [ ! -f /certs/logstash-forwarder.crt ]
 then
-  >&2 echo ">> no cert found... exiting"
-  exit 1
+  >&2 echo ">> no cert found... make sure you configuration maches!"
 fi
 
 if [ ! -f /logstash-forwarder-conf/logstash-forwarder.conf ]
@@ -18,7 +17,7 @@ then
 fi
 
 echo ">> using logstash server: $LOGSTASH_SERVER"
-sed "s/LOGSTASH_SERVER/$LOGSTASH_SERVER/g" /logstash-forwarder-conf/logstash-forwarder.conf > /etc/logstash-forwarder.conf
+sed "s/LOGSTASH_SERVER/$LOGSTASH_SERVER/g" /logstash-forwarder-conf/logstash-forwarder.conf | tee /etc/logstash-forwarder.conf
 
 echo ">> exec docker CMD"
 echo "$@"
